@@ -15,26 +15,20 @@ struct DailyScrum {
 }
 
 extension DailyScrum {
-    static let sampleDate: [DailyScrum] =
+    static let sampleData: [DailyScrum] =
     [
-        DailyScrum(
-            title: "Stand Up The Good",
+        DailyScrum(title: "Stand Up The Good",
             attendees: ["Toto", "TomTom", "Nini", "Denden"],
             lengthInMinutes: 15,
-            theme: .navy
-        ),
-        DailyScrum(
-            title: "Stand Up The Bad",
+            theme: .orange),
+        DailyScrum(title: "Stand Up The Bad",
             attendees: ["Leti", "Mel", "Anto", "Kanye"],
-            lengthInMinutes: 15,
-            theme: .oxblood
-        ),
-        DailyScrum(
-            title: "Stand Up The Ugly",
+            lengthInMinutes: 20,
+            theme: .oxblood),
+        DailyScrum(title: "Stand Up The Ugly",
             attendees: ["Al", "Vinc", "Bass", "Riri"],
-            lengthInMinutes: 15,
-            theme: .bubblegum
-        )
+            lengthInMinutes: 10,
+            theme: .bubblegum)
     ]
 }
 
