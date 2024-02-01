@@ -24,12 +24,10 @@ extension DailyScrum {
         DailyScrum(title: "Stand Up The Bad",
             attendees: ["Leti", "Mel", "Anto", "Kanye"],
             lengthInMinutes: 20,
-            theme: .oxblood),
+            theme: .lavender),
         DailyScrum(title: "Stand Up The Ugly",
             attendees: ["Al", "Vinc", "Bass", "Riri"],
             lengthInMinutes: 10,
             theme: .bubblegum)
     ]
 }
-
-
