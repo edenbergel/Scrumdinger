@@ -15,10 +15,24 @@ struct ScrumsView: View {
         NavigationStack {
             List(scrums) { scrum in
                 NavigationLink(destination: DetailView(scrum: scrum)) {
-                    CardView(scrum: scrum)
+                    HStack {
+                        Rectangle()
+                            .fill(scrum.theme.mainColor)
+                            .frame(width: 5, height: .infinity)
+                        CardView(scrum: scrum)
+                    }
                 }
-                .listRowBackground(scrum.theme.mainColor)
+                .listRowSeparator(.hidden)
+                .listRowInsets(
+                    .init(
+                        top: 0,
+                        leading: 0,
+                        bottom: 0,
+                        trailing: 15
+                    )
+                )
             }
+            .listRowSpacing(10.0)
             .navigationTitle("Daily Scrums")
             .toolbar {
                 ToolbarItem() {
