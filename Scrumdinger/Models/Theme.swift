@@ -40,6 +40,6 @@ enum Theme: String, CaseIterable, Identifiable {
     }
     
     var id: String {
-        self.name
+        name
     }
 }
