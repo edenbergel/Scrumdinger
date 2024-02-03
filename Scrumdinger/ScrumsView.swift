@@ -15,10 +15,14 @@ struct ScrumsView: View {
         NavigationStack {
             List($scrums) { $scrum in
                 NavigationLink(destination: DetailView(scrum: $scrum)) {
-                    HStack {
-                        Rectangle()
-                            .fill(scrum.theme.mainColor)
-                            .frame(width: 5, height: .infinity)
+                    HStack(spacing: 0) {
+                        GeometryReader { geometry in
+                            Rectangle()
+                                .fill(scrum.theme.mainColor)
+                                .frame(width: 5, height: geometry.size.height)
+                        }
+                        .fixedSize(horizontal: true, vertical: false)
+
                         CardView(scrum: scrum)
                     }
                 }
